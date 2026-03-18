@@ -53,19 +53,3 @@ def run(session):
 
 
 
-# def run(session):
-#     inventory = ["\n[ IAM DETAILS ]\n"]
-#     alerts = ["\n[ IAM ALERTS ]\n"]
-
-#     iam = session.client('iam')
-#     users = iam.list_users()['Users']
-
-#     for user in users:
-#         username = user['UserName']
-#         inventory.append(f"User: {username}\n")
-
-#         mfa = iam.list_mfa_devices(UserName=username)['MFADevices']
-#         if not mfa:
-#             alerts.append(f"[!] User {username} has NO MFA\n")
-
-#     return inventory, alerts
