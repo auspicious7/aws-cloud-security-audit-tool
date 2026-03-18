@@ -48,20 +48,3 @@ def run(session):
 
 
 
-# def run(session):
-#     inventory = ["\n[ RDS DETAILS ]\n"]
-#     alerts = ["\n[ RDS ALERTS ]\n"]
-
-#     rds = session.client('rds')
-#     dbs = rds.describe_db_instances()['DBInstances']
-
-#     for db in dbs:
-#         name = db['DBInstanceIdentifier']
-#         public = db['PubliclyAccessible']
-
-#         inventory.append(f"DB: {name} | Public: {public}\n")
-
-#         if public:
-#             alerts.append(f"[!] RDS {name} is PUBLIC\n")
-
-#     return inventory, alerts
