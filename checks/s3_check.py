@@ -72,23 +72,3 @@ def run(session):
 
 
 
-# def run(session):
-#     inventory = ["\n[ S3 DETAILS ]\n"]
-#     alerts = ["\n[ S3 ALERTS ]\n"]
-
-#     s3 = session.client('s3')
-#     buckets = s3.list_buckets()['Buckets']
-
-#     for bucket in buckets:
-#         name = bucket['Name']
-#         inventory.append(f"Bucket: {name}\n")
-
-#         try:
-#             acl = s3.get_bucket_acl(Bucket=name)
-#             for grant in acl['Grants']:
-#                 if 'AllUsers' in str(grant):
-#                     alerts.append(f"[!] Bucket {name} is PUBLIC\n")
-#         except:
-#             pass
-
-#     return inventory, alerts
