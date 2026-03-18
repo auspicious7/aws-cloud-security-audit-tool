@@ -30,11 +30,3 @@ def write_alerts(data):
 
 
 
-# def write_report(data):
-#     with open("output/output.txt", "w") as f:
-#         f.write("===== CLOUD SECURITY AUDIT REPORT =====\n")
-        
-#         for line in data:
-#             f.write(line)
-        
-#         f.write("\n===== END OF REPORT =====\n")
