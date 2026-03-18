@@ -45,17 +45,3 @@ def run(session):
 
 
 
-# def run(session):
-#     inventory = ["\n[ VPC DETAILS ]\n"]
-#     alerts = []
-
-#     ec2 = session.client('ec2')
-#     vpcs = ec2.describe_vpcs()['Vpcs']
-
-#     for vpc in vpcs:
-#         vpc_id = vpc['VpcId']
-#         cidr = vpc['CidrBlock']
-
-#         inventory.append(f"VPC: {vpc_id} | CIDR: {cidr}\n")
-
-#     return inventory, alerts
