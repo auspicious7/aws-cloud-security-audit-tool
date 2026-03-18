@@ -1,3 +1,43 @@
+                ┌────────────────────────────┐
+                │   AWS Account (Target)     │
+                └────────────┬───────────────┘
+                             │
+                     (Boto3 Session)
+                             │
+        ┌────────────────────┼────────────────────┐
+        │                    │                    │
+   ┌────▼────┐         ┌────▼────┐         ┌────▼────┐
+   │  EC2    │         │   S3     │         │   IAM    │
+   │ Check   │         │ Check    │         │ Check    │
+   └────┬────┘         └────┬────┘         └────┬────┘
+        │                    │                    │
+   ┌────▼────┐         ┌────▼────┐         ┌────▼────┐
+   │  RDS    │         │   VPC    │         │ CloudTrail │
+   │ Check   │         │ Check    │         │ (Optional) │
+   └────┬────┘         └────┬────┘         └────┬────┘
+        │                    │                    │
+        └────────────┬───────┴────────────┬──────┘
+                     │                    │
+              ┌──────▼──────┐     ┌──────▼──────┐
+              │ Inventory   │     │ Alerts      │
+              │ Report      │     │ Report      │
+              └──────┬──────┘     └──────┬──────┘
+                     │                    │
+              ┌──────▼────────────────────▼──────┐
+              │        Output Files              │
+              │ output.txt / output_alerts.txt   │
+              └─────────────────────────────────┘
+
+This tool uses a Boto3 session to connect to an AWS account and perform security checks across multiple services.  
+Each service module analyzes configurations and returns:
+
+- Inventory data (resources information)
+- Alerts (security misconfigurations)
+
+Finally, all results are aggregated and written into structured output reports.
+
+
+
 # 🔐 AWS Cloud Security Audit Tool
 
 A Python-based **AWS Cloud Security Audit Tool** designed to identify misconfigurations and potential security risks across AWS services.
