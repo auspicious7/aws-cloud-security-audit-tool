@@ -53,7 +53,7 @@ After running the tool, you will find results inside the `output/` folder:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/aws-cloud-security-audit-tool.git
+https://github.com/auspicious7/aws-cloud-security-audit-tool.git
 cd aws-cloud-security-audit-tool
 ```
 
@@ -118,7 +118,7 @@ python main.py
 Go to the `output/` folder:
 
 * 📄 `output.txt` → Full AWS audit data
-* 🚨 `output_alerts.txt` → Security findings
+* 🚨 `alerts.txt` → Security findings
 
 ---
 
