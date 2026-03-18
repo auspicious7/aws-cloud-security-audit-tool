@@ -1,4 +1,7 @@
 
+<img width="1024" height="1536" alt="AWS auditing process flowchart visualization" src="https://github.com/user-attachments/assets/b60cbacc-8b5e-48f6-979d-0247b89f8b9a" />
+
+
 This tool uses a Boto3 session to connect to an AWS account and perform security checks across multiple services.  
 Each service module analyzes configurations and returns:
 
